@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Create new tasks!</h1>
+
+  <%= form_with model: @task do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+    <%= form.label :details %>
+    <%= form.text_field :details, class: 'form-control'%>
+    <%= form.label :completed %>
+    <%= form.check_box :completed %>
+    <%= form.submit "Create Task" %>
+  <% end %>
+</div>
+
+<div class="container">
+  <%= link_to 'Back to list', tasks_path, class: 'btn btn-primary' %>
+</div>
